@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--内部js-->
+    <script>
+        //alert('aaaaaaaaa')
+        //变量：
+        let age = 18
+
+        let lname = 'linke老师'
+        console.log(age)
+        console.log(lname)
+        let uname = prompt("input name")
+        document.write()
+
+
+    </script>
+
+
+
+    <button class="pink">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮2</button>
+    <button>按钮2</button>
+    <script>
+        let bts = document.querySelectorAll('button')
+        for (let i = 0; i < bts.length; i++) {
+            bts[i].addEventListener('click', function () {
+                document.querySelector('.pink').className = ''
+                this.className = 'pink'
+            })
+        }
+    </script>
+
+</body>
+
+</html>
