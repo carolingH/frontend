@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // x 符号代表了 5 这个数值
+    x = 5
+    // y 符号代表了 6 这个数值
+    y = 6
+
+    //举例： 在 JavaScript 中使用变量可以将某个数据（数值）记录下来！
+
+    // 将用户输入的内容保存在 num 这个变量（容器）中
+    // num = prompt('请输入一数字!')
+
+    // // 通过 num 变量（容器）将用户输入的内容输出出来
+    // alert(11)
+    document.write('hello world!')
+    let num = 13 // 数值
+    let num2 = '2' // 字符串
+
+    // 结果为 132
+    // 原因是将数值 num 转换成了字符串，相当于 '13'
+    // 然后 + 将两个字符串拼接到了一起
+    console.log(num + num2)
+
+    // 结果为 11
+    // 原因是将字符串 num2 转换成了数值，相当于 2
+    // 然后数值 13 减去 数值 2
+    console.log(num - num2)//11
+
+    // let a = prompt('请输入一个数字')
+    // let b = prompt('请再输入一个数字')
+    // alert(a + b);//拼接
+    // console.log(2 == '2')  // true
+    // console.log(undefined === null)//false
+    // // === 全等 判断 值 和 数据类型都一样才行
+    // // 以后判断是否相等 请用 ===  
+    // console.log(2 === '2')//false
+    // console.log(NaN === NaN) // NaN 不等于任何人，包括他自己
+    // console.log(2 !== '2')  // true  
+    // console.log(2 != '2') // false
+    // 定义一个数组
+    let arr = ['html', 'css', 'javascript']
+
+    // 1. push 动态向数组的尾部添加一个单元
+    arr.push('Nodejs')
+    console.log(arr)
+    arr.push('Vue')
+
+    // 2. unshit 动态向数组头部添加一个单元
+    arr.unshift('VS Code')
+    console.log(arr)
+
+    // 3. splice 动态删除任意单元
+    arr.splice(2, 1) // 从索引值为2的位置开始删除1个单元
+    console.log(arr)
+
+    // 4. pop 删除最后一个单元
+    arr.pop()
+    console.log(arr)
+
+    // 5. shift 删除第一个单元
+    arr.shift()
+    console.log(arr)
+
+    // 这个函数似乎没有什么价值，除非能够向不同的人打招呼
+    // 这就需要借助参数来实现了
+    function sayHi(name) {
+      // 参数 name 可以被理解成是一个变量
+      console.log(name)
+      console.log('嗨~' + name)
+    }
+
+    // 调用 sayHi 函数，括号中多了 '小明'
+    // 这时相当于为参数 name 赋值了
+    sayHi('小明')// 结果为 小明
+
+    // 再次调用 sayHi 函数，括号中多了 '小红'
+    // 这时相当于为参数 name 赋值了
+    sayHi('小红') // 结果为 小红
+    let obj = {
+      uname: 'pink'
+    }
+    for (let k in obj) {
+      // k 属性名  字符串  带引号    obj.'uname'     k ===  'uname'
+      console.log(obj[k])//  属性值    obj['uname']   obj[k]
+      console.log(k)//  属性名    obj['uname']   obj[k]
+    }
+    let arr = ['red', 'green', 'blue']
+    //arr.splice(1, 0, 'pink') // 在索引号是1的位置添加 pink
+    //console.log(arr) // ['red', 'pink', 'green', 'blue']
+    arr.splice(1, 0, 'pink', 'hotpink') // 在索引号是1的位置添加 pink  hotpink
+    console.log(arr) // ['red', 'pink', 'hotpink', 'green', 'blue']
+
+    // 1. 定义一个普通函数
+    function repeat() {
+      console.log('不知疲倦的执行下去....')
+    }
+
+    // 2. 使用 setInterval 调用 repeat 函数
+    // 间隔 1000 毫秒，重复调用 repeat
+    setInterval(repeat, 1000)
+
+
+
+
+  </script>
+
+</body>
+
+</html>
